@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+    
+    
+
+
+<body>
+    <title>home</title>
+
+    <script src="home.js"></script>
+    <link href="home.css" rel="stylesheet" />
+    <div id="n">
+      
+
+
+        <form action="">
+            <br />
+            <br />
+            <input type="text" id="userNameRegister" placeholder="מייל" oninput="validateEmail()" />
+            <div id="emailLabel" class="error-message"></div>
+            <br />
+            <br />
+            <input id="passwordRegister" placeholder="סיסמא" onchange="checkCode()" />
+            <div id="passwordLabel" class="error-message"></div>
+
+            <br />
+
+            <meter max="4" id="password-strength-meter"></meter>
+            <h6 id="password-strength-text"></h6>
+
+
+
+
+            <br />
+            <input type="text" id="firstName" placeholder="שם פרטי" oninput="validateUsername()" />
+            <div id="usernameLabel" class="error-message"></div>
+            <br />
+
+            <br />
+            <input id="lastName" placeholder="שם משפחה" />
+            <br /><br /><br /><br />
+
+            <button onclick="register()"> הירשם</button>
+        </form>
+            </div>
+
+
+
+        <br /><br />
+
+
+    </div>
+
+
+
+
+    </div>-->
+    <div class="div2">
+        <div class="div1">
+
+
+            <br />
+
+            <div class="div1">
+                <h3>התחברות</h3>
+                <br />
+
+                <label>שם משתמש</label>  <br />
+                <input class="input_login" id="userNameLogin" />
+                <br />
+
+                <label>סיסמא</label>  <br />
+                <input class="input_login" id="passwordLogin" />
+                <br /><br /><br />
+                <button id="login" onclick="login()"> התחבר</button>
+            </div>
+        </div>
+</body>
+
+
+</html>

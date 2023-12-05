@@ -1,0 +1,163 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="./script/Product.js"></script>
+    <link href="./css/Products.css" rel="stylesheet" />
+
+    <meta charset="utf-8" />
+    <title></title>
+
+    <div style="margin-right: 13vw; background-color: white; display: flex; gap: 12vw; position: relative; top: 0; z-index: 9999; height: 10vh; position:sticky ">
+        <div class="Checkout " style=" width:70px;">
+            <a href="ShoppingBag.html"><img src="/Icon (10).svg" /></a>
+            <span class="BagSummary MiniBagNonSecure">
+                <a href="shoppingbag.html">
+                    <div class="Icon">
+                        <div class="ItemCount">
+                            <span id="ItemsCountText">0</span>
+                        </div>
+                    </div>
+
+                </a>
+
+            </span>
+        </div>
+        <a style=" text-decoration: none;color:black;" href="#" title="כניסה לצפייה בפרטי החשבון" onclick="edit()" accesskey="h">עריכת פרטי חשבון<img src="Icon (9).svg" /></a>
+
+
+
+        <input style="border: 1.50px black solid; width: 15vw; height:4vh; background: #EAEAEA; border-radius: 9px " type="text" id="nameSearch" class="floatRight" placeholder="              חיפוש           " onchange="filterProducts()">
+        <div></div>
+
+        <img src="Ellipse 9.svg" style="margin-left:2px" />
+
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    
+
+    <template id="temp-card">
+        <div class="card" >
+
+            <img class="img-w"></img>
+            <h1></h1>
+            <p class="price"></p>
+            <p class="description"></p>
+            <p><button id="add">הוסף לסל</button></p>
+            <div id="overlay">
+                <div id="popup">
+                    <h2>הפריט נוסף לסל בהצלחה</h2><br />
+                    <button id="shopingBag">לסל הקניות</button>
+                    <button id="continue-buying">להמשיך בקניה</button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </template>
+
+
+    <template id="temp-category">
+        <div class="cb checkbox">
+            <input onchange="filterProducts()" type="checkbox" class="opt" id="" value="">
+            <label for="">
+                <span style="color:white" class="OptionName"></span>
+                <span class="Count"></span>
+                </a>
+            </label>
+        </div>
+    </template>
+</head>
+<body onload="filterProducts();drawCategory()">
+    <header>
+        
+
+        <div style="width: 1048px; height: 25vh; left: 0px; top: 116px;  background: #F0D3DA;position:absolute; box-shadow: 0px 4px 15.5px rgba(0, 0, 0, 0.15) ; width:100vw;direction:ltr "></div>
+        <div style="width: 404.85px; height: 59.06px; left: 593px; top: 161px; position: absolute; text-align: right; color: black; font-size: 62.17px; font-family: Rubik; font-weight: 700; word-wrap: break-word"> 40% הנחה </div>
+        <div style="width: 324.82px; height: 59.06px; left: 673.04px; top: 223.94px; position: absolute; color: black; font-size: 37.30px; font-family: Rubik; font-weight: 500; word-wrap: break-word"> על כל מוצרי הניובורן</div>
+        <img style="width: 254px; height: 211px; left: 30px; top: 117px; position: absolute" src="/צילום מסך 2023-09-26 143546 1.png" />
+        <img style="width: 269px; height: 211px; left: 321px; top: 117px; position: absolute" src="/צילום מסך 2023-09-26 143835 1.png" />
+
+
+
+
+
+
+
+
+
+    </header>
+
+    <div id="filters" class="Filters fixedVisible" style="height: 100vh; direction: rtl; margin-top: -400px;  gap: 10vw; position: relative; top: 0; z-index: 9999; position: sticky ">
+        <div class="ResultCount" style="position: absolute; top: 0px;">
+            <a class="Clear" href="">נקה הכל</a>
+            <div><span id="counter">  </span> מוצרים</div>
+
+            <div>
+                <span id="counter">
+
+                </span>
+            </div>
+        </div>
+
+        <img style=" border-radius:50%; width: 50%; height:10%; margin-right:30px" src="/image 42.png" /><br />
+        <div style=" color: white; margin-right: 30px ">אביזרי צילום</div>
+
+        <div id="categoryList" class="filterBreak">
+            <p><b>סינון לפי קטגוריה</b></p>
+        </div>
+
+
+        <div id="priceRangeFilter" class="filterBreak">
+            <div><span id="counter">  </span><h1 style="color:white"> מחיר:</h1></div>
+
+            <input type="range" min="0" max="2000" id="myRange" oninput="filterProducts()">
+            <h2 id="minValue" style="color:white"></h2> <h2 style="color:white" id="maxValue"></h2>
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+</body>
+<div id="PoductList">
+
+</div>
+</html>
